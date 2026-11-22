@@ -1,0 +1,25 @@
+{
+  "name": "rememberdziadzi",
+  "private": true,
+  "version": "1.0.0",
+  "description": "RememberDziadzi.com — Encrypted Private Family Archive",
+  "type": "module",
+  "scripts": {
+    "encrypt": "node scripts/encrypt-vault.mjs",
+    "dev": "vite --port 4173 --host",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview --port 4173 --host",
+    "audit:privacy": "node scripts/audit-privacy.mjs"
+  },
+  "dependencies": {
+    "@oddbird/popover-polyfill": "^0.6.0",
+    "invokers-polyfill": "^0.5.2"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "ffmpeg-static": "^5.2.0",
+    "sharp": "^0.33.5",
+    "typescript": "^5.7.2",
+    "vite": "^6.0.7"
+  }
+}

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex, nofollow" />
+    <meta name="referrer" content="no-referrer" />
+    <meta name="color-scheme" content="dark light" />
+    <meta name="description" content="Private family archive." />
+    <title>RememberDziadzi.com — Private Family Archive</title>
+
+    <!-- Early connection hints for editorial typography (with immediate system fallbacks) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,400;1,600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+    />
+
+    <!-- Favicon: Geometric Brass Star Emblem -->
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230b0e15'/%3E%3Cpath d='M32 10l6.2 14.4L54 26l-11.8 10.3L45.6 52 32 43.7 18.4 52l3.4-15.7L10 26l15.8-1.6z' fill='%23d4b072'/%3E%3C/svg%3E"
+    />
+  </head>
+  <body>
+    <!-- =======================================================================
+         PRIVATE FAMILY ARCHIVE ENTRANCE GATE (AES-256-GCM CLIENT DECRYPTION)
+         ======================================================================= -->
+    <main id="vault-gate" class="vault-gate" aria-labelledby="vault-gate-title">
+      <div class="vault-ambient" aria-hidden="true"></div>
+
+      <section class="vault-card">
+        <div class="vault-crest" aria-hidden="true">
+          <svg viewBox="0 0 48 48" width="42" height="42">
+            <circle cx="24" cy="24" r="21" fill="none" stroke="rgba(223, 192, 137, 0.35)" stroke-width="1.2" />
+            <path
+              d="M24 12.5a5.5 5.5 0 0 0-5.5 5.5v3.5h-1.25A2.25 2.25 0 0 0 15 23.75v9.5a2.25 2.25 0 0 0 2.25 2.25h13.5A2.25 2.25 0 0 0 33 33.25v-9.5a2.25 2.25 0 0 0-2.25-2.25H29.5V18a5.5 5.5 0 0 0-5.5-5.5zm-3.2 5.5a3.2 3.2 0 1 1 6.4 0v3.5h-6.4V18zm3.2 8.2a2 2 0 0 1 1 3.73V32a1 1 0 1 1-2 0v-2.07a2 2 0 0 1 1-3.73z"
+              fill="#dfc089"
+            />
+          </svg>
+        </div>
+
+        <p class="vault-eyebrow">Private Family Archive · End-to-End Encrypted</p>
+        <h1 id="vault-gate-title" class="vault-title">RememberDziadzi.com</h1>
+        <p class="vault-lead">
+          This private memorial archive is protected for family members. Enter the family passphrase to decrypt and open the exhibition on your device.
+        </p>
+
+        <div id="vault-checking-state" class="vault-checking" hidden>
+          <span class="vault-spinner" aria-hidden="true"></span>
+          <span>Restoring unlocked session…</span>
+        </div>
+
+        <form id="vault-form" class="vault-form" method="post" action="#" novalidate>
+          <div class="vault-field">
+            <label for="vault-password" class="vault-label">Family Passphrase</label>
+            <div class="vault-input-wrap">
+              <input
+                type="password"
+                id="vault-password"
+                name="password"
+                class="vault-input"
+                autocomplete="current-password"
+                enterkeyhint="done"
+                required
+                aria-invalid="false"
+                data-error="vault-error"
+              />
+              <button
+                type="button"
+                id="toggle-password"
+                class="vault-toggle-btn"
+                aria-pressed="false"
+                aria-label="Show passphrase"
+                aria-controls="vault-password"
+                aria-describedby="toggle-password-warning"
+              >
+                Show
+              </button>
+              <span id="toggle-password-warning" class="visually-hidden">
+                Warning: showing the passphrase reveals it on screen.
+              </span>
+            </div>
+
+            <p id="vault-error" class="vault-error" hidden>
+              <svg viewBox="0 0 20 20" width="16" height="16" aria-hidden="true" class="vault-error-icon">
+                <path
+                  d="M10 2a8 8 0 1 0 0 16 8 8 0 0 0 0-16zm0 4.25a.9.9 0 0 1 .9.9v3.6a.9.9 0 1 1-1.8 0v-3.6a.9.9 0 0 1 .9-.9zm0 7.75a1.05 1.05 0 1 1 0-2.1 1.05 1.05 0 0 1 0 2.1z"
+                  fill="currentColor"
+                />
+              </svg>
+              <span id="vault-error-text"></span>
+            </p>
+          </div>
+
+          <div class="vault-remember-row">
+            <input type="checkbox" id="vault-remember" name="remember" class="vault-checkbox" />
+            <label for="vault-remember" class="vault-checkbox-label">Keep unlocked on this device</label>
+          </div>
+
+          <button type="submit" id="vault-submit" class="btn-noble btn-primary vault-submit-btn">
+            <span id="vault-submit-label">Unlock Family Archive</span>
+            <span aria-hidden="true">→</span>
+          </button>
+        </form>
+
+        <p id="vault-status" class="visually-hidden" aria-live="polite" role="status"></p>
+
+        <p class="vault-security-note">
+          AES-256-GCM · Decrypted locally in your browser. Your passphrase never leaves this device.
+        </p>
+      </section>
+    </main>
+
+    <!-- Decrypted exhibition mounts here ONLY after valid client-side AES-256-GCM decryption -->
+    <div id="exhibition-root" hidden></div>
+
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
